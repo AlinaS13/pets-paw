@@ -1,0 +1,10 @@
+@import "./scss/mixins";
+@import "./scss/variables";
+
+.container {
+  @include container;
+  @media screen and (min-width: $breakpoint-tablet) {
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+  }
+}

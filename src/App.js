@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import styles from "./App.module.scss";
 
 import HomePage from "./pages/homePage/HomePage";
 import VotingPage from "./pages/votingPage/VotingPage";
@@ -8,7 +9,7 @@ import { Layout } from "./components/layout/Layout";
 
 function App() {
   return (
-    <div>
+    <div className={styles.container}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

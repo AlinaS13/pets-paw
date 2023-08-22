@@ -1,0 +1,118 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+//   @media screen and (min-width: $breakpoint-tablet) {
+//   }
+//   @media screen and (min-width: $breakpoint-desktop) {
+//   }
+
+.header {
+  @media screen and (min-width: $breakpoint-tablet) {
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+  }
+  img {
+    margin-bottom: 80px;
+  }
+  h2 {
+    color: $mainTextColor;
+    @include font-size(44, 500, 58);
+    margin-bottom: 10px;
+  }
+  h3 {
+    color: $secondaryTextColor;
+    @include font-size(20, 400, normal);
+    margin-bottom: 60px;
+  }
+  p {
+    color: $mainTextColor;
+    @include font-size(20, 500, normal);
+    margin-bottom: 20px;
+  }
+}
+.navigation {
+  display: flex;
+  gap: 16px;
+  span {
+    display: flex;
+    justify-content: center;
+    margin-top: 210px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    background: $secondaryBgColor;
+    color: $mainAccentColor;
+    text-transform: uppercase;
+    @include font-size(12, 500, 16);
+    letter-spacing: 2px;
+  }
+}
+.votingLink {
+  width: 138px;
+  height: 198px;
+  background-color: #b4b7ff;
+  border-radius: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  background-image: url(../../assets/img/header/vote-table.png);
+  background-repeat: no-repeat;
+  &:hover,
+  &:focus {
+    border-color: $secondaryBgColor;
+    span {
+      background-color: $secondaryAccentColor;
+    }
+  }
+  &[aria-current="page"] {
+    border-color: $secondaryAccentColor;
+    span {
+      color: $secondaryBgColor;
+      background-color: $mainAccentColor;
+    }
+  }
+}
+.bredsLink {
+  width: 138px;
+  height: 198px;
+  background-color: #97eab9;
+  border-radius: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  background-image: url(../../assets/img/header/pet-breeds.png);
+  background-repeat: no-repeat;
+  &:hover,
+  &:focus {
+    border-color: $secondaryBgColor;
+    span {
+      background-color: $secondaryAccentColor;
+    }
+  }
+  &[aria-current="page"] {
+    border-color: $secondaryAccentColor;
+    span {
+      color: $secondaryBgColor;
+      background-color: $mainAccentColor;
+    }
+  }
+}
+
+.galleryLink {
+  width: 138px;
+  height: 198px;
+  background-color: #ffd280;
+  border-radius: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  background-image: url(../../assets/img/header/images-search.png);
+  background-repeat: no-repeat;
+  &:hover,
+  &:focus {
+    border-color: $secondaryBgColor;
+    span {
+      background-color: $secondaryAccentColor;
+    }
+  }
+  &[aria-current="page"] {
+    border-color: $secondaryAccentColor;
+    span {
+      color: $secondaryBgColor;
+      background-color: $mainAccentColor;
+    }
+  }
+}
