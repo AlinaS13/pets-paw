@@ -21,12 +21,12 @@
   }
   h3 {
     color: $secondaryTextColor;
-    @include font-size(20, 400, normal);
+    @include font-size(20, 400);
     margin-bottom: 60px;
   }
   p {
     color: $mainTextColor;
-    @include font-size(20, 500, normal);
+    @include font-size(20, 500);
     margin-bottom: 20px;
   }
 }
