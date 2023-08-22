@@ -1,7 +1,7 @@
 @mixin font-size($fontSize, $fontWeight, $lineHeight) {
-  font-size: calc($fontSize / 16) + rem;
+  font-size: calc(#{$fontSize} / 16) + rem;
   font-weight: $fontWeight;
-  line-height: calc($lineHeight / $fontSize);
+  line-height: calc(#{$lineHeight} / #{$fontSize});
 }
 
 @mixin reset-list {
@@ -13,10 +13,6 @@
 
 @mixin reset-list-item {
   margin-bottom: 0;
-}
-
-@mixin calc($count, $gap) {
-  width: calc((100% - ($count - 1) * $gap) / $count);
 }
 
 @mixin mobile {
