@@ -1,6 +1,6 @@
 @mixin font-size($fontSize, $fontWeight, $lineHeight) {
   font-size: calc(#{$fontSize} / 16) + rem;
-  font-weight: $fontWeight;
+  font-weight: #{$fontWeight};
   line-height: calc(#{$lineHeight} / #{$fontSize});
 }
 
@@ -57,7 +57,7 @@
 }
 
 @mixin media($size) {
-  @media screen and (min-width: ($size + px)) {
+  @media screen and (min-width: (#{$size} + px)) {
     @content;
   }
 }
