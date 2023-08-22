@@ -1,7 +1,11 @@
-@mixin font-size($fontSize, $fontWeight, $lineHeight) {
-  font-size: calc(#{$fontSize} / 16) + rem;
-  font-weight: #{$fontWeight};
-  line-height: calc(#{$lineHeight} / #{$fontSize});
+@mixin font-size($fontSize, $fontWeight, $lineHeight: false) {
+  font-size: calc($fontSize / 16) + rem;
+  font-weight: $fontWeight;
+  @if $lineHeight {
+    line-height: calc($lineHeight / $fontSize);
+  } @else {
+    line-height: normal;
+  }
 }
 
 @mixin reset-list {
@@ -57,7 +61,7 @@
 }
 
 @mixin media($size) {
-  @media screen and (min-width: (#{$size} + px)) {
+  @media screen and (min-width: ($size + px)) {
     @content;
   }
 }
