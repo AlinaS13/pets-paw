@@ -3,12 +3,14 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { Loader } from "../loader/Loader";
 import { Header } from "../header/Header";
+import { Hero } from "components/hero/Hero";
 
 export const Layout = () => {
   return (
     <>
+      <Header />
       <div className={styles.layout}>
-        <Header />
+        <Hero />
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>

@@ -1,0 +1,13 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.currentPages {
+  padding: 5px 33px;
+  border-radius: 10px;
+  background: $mainAccentColor;
+  color: $secondaryBgColor;
+  text-align: center;
+  @include font-size(20, 500, 30);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

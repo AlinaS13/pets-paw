@@ -1,0 +1,75 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.breedsPageContainer {
+  width: 100%;
+  padding: 20px;
+  // display: flex;
+  border-radius: 20px;
+  background-color: $secondaryBgColor;
+}
+
+.headContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.votingButtonWrp {
+  display: flex;
+  position: absolute;
+  right: 50px;
+  top: 100px;
+}
+
+.votingButtonLike {
+  background-color: #97eab9;
+  padding: 20px 25px;
+  border: 3px solid $secondaryBgColor;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  svg {
+    fill: $secondaryBgColor;
+  }
+  &:hover,
+  &:focus {
+    background: #97eab94d;
+    svg {
+      fill: #97eab9;
+    }
+  }
+}
+
+.votingButtonFavourite {
+  background-color: $mainAccentColor;
+  padding: 20px 25px;
+  border: 3px solid $secondaryBgColor;
+  svg {
+    fill: $secondaryBgColor;
+  }
+  &:hover,
+  &:focus {
+    background: $secondaryAccentColor;
+    svg {
+      fill: $mainAccentColor;
+    }
+  }
+}
+
+.votingButtonDislike {
+  background-color: #ffd280;
+  padding: 20px 25px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 3px solid $secondaryBgColor;
+  svg {
+    fill: $secondaryBgColor;
+  }
+  &:hover,
+  &:focus {
+    background: #ffd2804d;
+    svg {
+      fill: #ffd280;
+    }
+  }
+}
