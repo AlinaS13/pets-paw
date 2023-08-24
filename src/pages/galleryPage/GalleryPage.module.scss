@@ -4,7 +4,6 @@
 .galleryPageContainer {
   width: 100%;
   padding: 20px;
-
   border-radius: 20px;
   background-color: $secondaryBgColor;
 }
@@ -12,6 +11,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .headContainer {
   display: flex;
   gap: 10px;

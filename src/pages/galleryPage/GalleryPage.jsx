@@ -3,6 +3,7 @@ import styles from "./GalleryPage.module.scss";
 import { GoBackLink } from "components/goBackLink/GoBackLink";
 import { CurrentPage } from "components/currentPage/CurrentPage";
 import { Upload } from "components/upload/Upload";
+import { ExpandedFilter } from "components/expandedFilter/ExpandedFilter";
 
 const GalleryPage = () => {
   return (
@@ -14,6 +15,7 @@ const GalleryPage = () => {
         </div>
         <Upload />
       </div>
+      <ExpandedFilter />
     </div>
   );
 };

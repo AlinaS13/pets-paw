@@ -5,7 +5,9 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import FilterZASVG from "assets/svg/FilterZASVG";
 import FilterAZSVG from "assets/svg/FilterAZSVG";
-export const FilterAllBreeds = () => {
+import { nanoid } from "@reduxjs/toolkit";
+
+export const FilterAllBreeds = ({ breeds, setBreed }) => {
   const [isBreedsOpen, setIsBreedsOpen] = useState(false);
   const [isLimitOpen, setIsLimitOpen] = useState(false);
   const [selectedBreeds, setSelectedBreeds] = useState("All breeds");
@@ -43,12 +45,25 @@ export const FilterAllBreeds = () => {
             <li
               onClick={() => {
                 setSelectedBreeds("All breeds");
-                // setLanguage(false);
+                setBreed(false);
                 setIsBreedsOpen(false);
               }}
             >
-              <span>...</span>
+              <span>All breeds</span>
             </li>
+            {breeds.map(({ name }) => (
+              <li
+                className={styles.dropDownItem}
+                key={nanoid()}
+                onClick={(e) => {
+                  setSelectedBreeds(e.target.innerText);
+                  setBreed(e.target.innerText);
+                  setIsBreedsOpen(false);
+                }}
+              >
+                {name}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

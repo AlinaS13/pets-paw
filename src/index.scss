@@ -1,9 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "./scss/variables";
 @import-normalize;
 
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,8 +18,22 @@ body {
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
   color: $mainTextColor;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 12px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: $mainAccentColor;
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: $mainAccentColor;
+}
+html:hover {
+  overflow: auto;
 }
 
 h1,

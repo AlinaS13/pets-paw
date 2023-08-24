@@ -10,7 +10,21 @@ export const getAllBreeds = createAsyncThunk(
   "breeds/getAllBreeds",
   async (_, thunkAPI) => {
     try {
-      const response = await axios(`/breeds?limit=30`);
+      const response = await axios(`/breeds?limit=20`);
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e);
+    }
+  }
+);
+
+export const getBreedById = createAsyncThunk(
+  "breeds/getBreedById",
+  async (breedId, thunkAPI) => {
+    try {
+      const response = await axios(
+        `/images/search?limit=20&breed_ids=${breedId}`
+      );
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e);

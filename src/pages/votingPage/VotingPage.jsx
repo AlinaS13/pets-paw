@@ -5,6 +5,7 @@ import { CurrentPage } from "components/currentPage/CurrentPage";
 import LikeSVG from "assets/svg/LikeSVG";
 import FavouriteSVG from "assets/svg/FavouriteSVG";
 import DislikeSVG from "assets/svg/DislikeSVG";
+
 const VotingPage = () => {
   return (
     <div className={styles.votingPageContainer}>
