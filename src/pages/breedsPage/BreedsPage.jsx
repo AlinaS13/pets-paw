@@ -31,6 +31,7 @@ const BreedsPage = () => {
         return value.name === breed;
       })[0];
       dispatch(getBreedById(filteredBreed.id));
+      console.log(filteredBreed.id);
       // setBreed(false);
     }
   }, [dispatch, breed, breeds]);

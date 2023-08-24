@@ -19,7 +19,7 @@ export const getAllBreeds = createAsyncThunk(
 );
 
 export const getBreedById = createAsyncThunk(
-  "breeds/getBreedById",
+  "filteredBreeds/getBreedById",
   async (breedId, thunkAPI) => {
     try {
       const response = await axios(
