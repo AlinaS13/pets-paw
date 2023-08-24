@@ -76,7 +76,7 @@
 }
 
 .galleryGrid {
-  @apply mx-auto  w-[640px] grid grid-cols-3 gap-4 auto-rows-[150px];
+  @apply w-[640px] auto-rows-[150px] mx-auto grid grid-cols-3 gap-4;
   li {
     border-radius: 30px;
   }
