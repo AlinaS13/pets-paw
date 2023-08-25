@@ -118,7 +118,7 @@ const BreedsPage = () => {
             {isLoading ? (
               <Loader />
             ) : (
-              filteredBreeds.slice(0, limit).map((el) => {
+              filteredBreeds?.slice(0, limit).map((el) => {
                 return (
                   <li key={nanoid()}>
                     <img src={el.url} alt="breed" className={styles.breedImg} />
