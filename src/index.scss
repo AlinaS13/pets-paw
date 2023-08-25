@@ -22,19 +22,6 @@ body {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-x: hidden;
 }
-html::-webkit-scrollbar {
-  width: 12px;
-}
-html::-webkit-scrollbar-thumb {
-  background-color: $mainAccentColor;
-  border-radius: 4px;
-}
-html::-webkit-scrollbar-thumb:hover {
-  background-color: $mainAccentColor;
-}
-html:hover {
-  overflow: auto;
-}
 
 h1,
 h2,

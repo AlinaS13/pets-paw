@@ -4,13 +4,13 @@ import styles from "./SearchBreeds.module.scss";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { getBreedsByName } from "redux/search/searchOperation";
-import { getAllBreeds } from "redux/breeds/breedsOperation";
-import { useEffect } from "react";
+// import { getAllBreeds } from "redux/breeds/breedsOperation";
+// import { useEffect } from "react";
 export const SearchBreeds = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getAllBreeds());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getAllBreeds());
+  // }, [dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

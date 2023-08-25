@@ -8,9 +8,9 @@ axios.defaults.headers.common["x-api-key"] =
 
 export const getAllBreeds = createAsyncThunk(
   "breeds/getAllBreeds",
-  async (_, thunkAPI) => {
+  async (limit, thunkAPI) => {
     try {
-      const response = await axios(`/breeds?limit=20`);
+      const response = await axios(`/breeds?limit=${limit}`);
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e);

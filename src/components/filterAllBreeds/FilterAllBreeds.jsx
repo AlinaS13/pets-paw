@@ -7,11 +7,18 @@ import FilterZASVG from "assets/svg/FilterZASVG";
 import FilterAZSVG from "assets/svg/FilterAZSVG";
 import { nanoid } from "@reduxjs/toolkit";
 
-export const FilterAllBreeds = ({ breeds, setBreed }) => {
+export const FilterAllBreeds = ({
+  breeds,
+  setBreed,
+  setLimit,
+  limit,
+  setSort,
+  sort,
+}) => {
   const [isBreedsOpen, setIsBreedsOpen] = useState(false);
   const [isLimitOpen, setIsLimitOpen] = useState(false);
   const [selectedBreeds, setSelectedBreeds] = useState("All breeds");
-  const [selectedLimit, setSelectedLimit] = useState("Limit: 10");
+  // const [selectedLimit, setSelectedLimit] = useState("Limit: 10");
 
   const hendleOpenBreedsList = () => {
     setIsBreedsOpen(!isBreedsOpen);
@@ -78,7 +85,7 @@ export const FilterAllBreeds = ({ breeds, setBreed }) => {
               <MdKeyboardArrowUp size={20} fill="#8C8C8C" />
             </button>
           )}
-          {selectedLimit}
+          {"Limit: " + limit}
 
           <ul
             className={
@@ -89,23 +96,56 @@ export const FilterAllBreeds = ({ breeds, setBreed }) => {
           >
             <li
               onClick={() => {
-                setSelectedLimit("Limit: 10");
-                // setLimit(false);
+                setLimit(5);
                 setIsLimitOpen(false);
               }}
             >
-              <span>...</span>
+              Limit: 5
+            </li>
+            <li
+              onClick={() => {
+                setLimit(10);
+                setIsLimitOpen(false);
+              }}
+            >
+              Limit: 10
+            </li>
+            <li
+              onClick={() => {
+                setLimit(15);
+                setIsLimitOpen(false);
+              }}
+            >
+              Limit: 15
+            </li>
+            <li
+              onClick={() => {
+                setLimit(20);
+                setIsLimitOpen(false);
+              }}
+            >
+              Limit: 20
             </li>
           </ul>
         </div>
       </div>
       <div style={{ minWidth: "40px" }}>
-        <button className={styles.filterLetterBtn}>
+        <button
+          className={styles.filterLetterBtn}
+          onClick={() => {
+            setSort("desc");
+          }}
+        >
           <FilterZASVG />
         </button>
       </div>
       <div style={{ minWidth: "40px" }}>
-        <button className={styles.filterLetterBtn}>
+        <button
+          className={styles.filterLetterBtn}
+          onClick={() => {
+            setSort("asc");
+          }}
+        >
           <FilterAZSVG />
         </button>
       </div>
