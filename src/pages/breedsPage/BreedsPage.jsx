@@ -61,7 +61,7 @@ const BreedsPage = () => {
         <FilterAllBreeds breeds={breeds} setBreed={(data) => setBreed(data)} />
       </div>
 
-      {!breed ? (
+      {!breed && filteredBreeds ? (
         <ul className={styles.galleryGrid}>
           {isLoading ? (
             <Loader />
