@@ -25,16 +25,25 @@ const BreedsPage = () => {
     dispatch(getAllBreeds());
   }, [dispatch]);
 
+  // useEffect(() => {
+  //   if (breed) {
+  //     const filteredBreed = Object.values(breeds).filter(function (value) {
+  //       return value.name === breed;
+  //     })[0];
+  //     dispatch(getBreedById(filteredBreed.id));
+  //     console.log(filteredBreed.id);
+  //     // setBreed(false);
+  //   }
+  // }, [dispatch, breed, breeds]);
   useEffect(() => {
-    if (breed) {
-      const filteredBreed = Object.values(breeds).filter(function (value) {
-        return value.name === breed;
-      })[0];
-      dispatch(getBreedById(filteredBreed.id));
-      console.log(filteredBreed.id);
-      // setBreed(false);
+    if (breed && breeds) {
+      const filteredBreed = breeds.find((value) => value.name === breed);
+      if (filteredBreed) {
+        dispatch(getBreedById(filteredBreed.id));
+      }
     }
   }, [dispatch, breed, breeds]);
+
   console.log(filteredBreeds);
   console.log(breed);
   // const filteredBreeds = breeds.filter(() => {
