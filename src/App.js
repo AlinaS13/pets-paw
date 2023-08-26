@@ -11,6 +11,7 @@ import FavouritesPage from "pages/favouritesPage/FavouritesPage";
 import LikesPage from "pages/likesPage/LikesPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BreedDescriptionPage from "pages/breedDescriptionPage/BreedDescriptionPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/voting" element={<VotingPage />} />
           <Route path="/breeds" element={<BreedsPage />} />
+          <Route path="/breeds/:id" element={<BreedDescriptionPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/likes" element={<LikesPage />} />
           <Route path="/favourites" element={<FavouritesPage />} />

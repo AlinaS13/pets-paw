@@ -1,0 +1,35 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.breedsPageContainer {
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: $secondaryBgColor;
+}
+
+.headContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.breedId {
+  padding: 5px 30px;
+  border-radius: 10px;
+  background: #ff868e;
+  color: #fff;
+  @include font-size(20, 500, 30);
+  letter-spacing: 2px;
+}
+
+.currentPages {
+  padding: 5px 33px;
+  border-radius: 10px;
+  background: $secondaryAccentColor;
+  color: $mainAccentColor;
+  text-align: center;
+  @include font-size(20, 500, 30);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

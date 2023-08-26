@@ -1,0 +1,77 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.swiperWrp {
+  background-color: $secondaryBgColor;
+  width: 640px;
+  height: 360px;
+  margin: 0 auto;
+  margin-bottom: 51px;
+  :global(.swiper-pagination) {
+    position: absolute;
+    bottom: -7% !important;
+    left: 15% !important;
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+    background: #fff;
+    border-radius: 30px;
+    width: 60% !important;
+    padding: 20px;
+  }
+}
+
+.breedImage {
+  width: 640px;
+  height: 360px;
+  border-radius: 20px;
+}
+
+.breedInfoWrp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid #fbe0dc;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+}
+
+.breedInfoName {
+  color: $mainTextColor;
+  text-align: center;
+  @include font-size(36, 500);
+  position: absolute;
+  bottom: 91%;
+  border-radius: 20px;
+  background: $secondaryBgColor;
+  width: 300px;
+  height: 62px;
+}
+
+.breedInfoDescription {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-align: justify;
+  @include font-size(20, 500);
+  color: $accentTextColor;
+}
+.breedInfoContainer {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  p {
+    color: $mainTextColor;
+    @include font-size(16, 500);
+  }
+  span {
+    color: $accentTextColor;
+    @include font-size(16, 400);
+  }
+}
+.breedTemperamentSpan {
+  max-width: 270px;
+}

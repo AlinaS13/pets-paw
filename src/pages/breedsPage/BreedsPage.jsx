@@ -12,10 +12,11 @@ import {
 } from "../../redux/breeds/breedsSelector.js";
 import { Loader } from "components/loader/Loader";
 import { nanoid } from "@reduxjs/toolkit";
-// import { BreedInfo } from "components/breedList/BreedInfo";
+import { NavLink } from "react-router-dom";
 
 const BreedsPage = () => {
   const breeds = useSelector(getBreeds);
+  // const { id } = useParams();
   const isLoading = useSelector(isLoadingBreeds);
   const filteredBreeds = useSelector(getFilteredBreeds);
   // const [allBreeds, setAllBreeds] = useState(false);
@@ -23,7 +24,6 @@ const BreedsPage = () => {
   const [limit, setLimit] = useState(10);
   const [sort, setSort] = useState("asc");
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getAllBreeds(20));
   }, [dispatch]);
@@ -90,7 +90,7 @@ const BreedsPage = () => {
               breedsResult.slice(0, limit).map((breed) => {
                 return (
                   <li key={nanoid()} className={styles.breedElement}>
-                    <a href="https://https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI">
+                    <NavLink to={`/breeds/${breed.id}`}>
                       {breed.image && breed.image.url ? (
                         <img
                           src={breed.image.url}
@@ -107,7 +107,7 @@ const BreedsPage = () => {
                       <div className={styles.breedOverlay}>
                         <h3 className={styles.breedName}>{breed.name}</h3>
                       </div>
-                    </a>
+                    </NavLink>
                   </li>
                 );
               })
@@ -128,7 +128,6 @@ const BreedsPage = () => {
             )}
           </ul>
         )}
-        {/* <BreedInfo /> */}
       </div>
     </>
   );
