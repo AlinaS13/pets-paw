@@ -1,0 +1,59 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.votingLogsWrp {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.votingLogsItem {
+  border-radius: 10px;
+  background: #f8f8f7;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 25px;
+}
+.votingContentWrp {
+  display: flex;
+  gap: 20px;
+}
+.votingLogsTimeWrp {
+  border-radius: 5px;
+  background: #fff;
+  padding: 3px 10px;
+  text-align: center;
+}
+.votingLogsTime {
+  @include font-size(16, 400, 24);
+  color: $mainTextColor;
+}
+
+.votingLogsText {
+  display: flex;
+  align-items: center;
+  color: $accentTextColor;
+  @include font-size(16, 400, 24);
+}
+.votingLogsId {
+  color: $mainTextColor;
+  @include font-size(16, 500, 24);
+}
+
+.votingLikeWrp {
+  svg {
+    fill: #97eab9;
+  }
+}
+
+.votingDislikesWrp {
+  svg {
+    fill: #ffd380;
+  }
+}
+
+.votingFavouriteWrp {
+  svg {
+    fill: #ff868e;
+  }
+}

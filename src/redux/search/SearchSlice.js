@@ -1,27 +1,27 @@
-// import { createSlice } from "@reduxjs/toolkit";
-// import { getBreedsByName } from "./searchOperation";
+import { createSlice } from "@reduxjs/toolkit";
+import { fetchRandomCats } from "./searchOperation";
 
-// const initialState = {
-//   breeds: [],
-//   isLoading: false,
-// };
+const initialState = {
+  search: [],
+  isLoading: false,
+};
 
-// export const searchSlice = createSlice({
-//   name: "breeds",
-//   initialState,
-//   extraReducers: (builder) => {
-//     builder
-//       .addCase(getBreedsByName.pending, (state, actions) => {
-//         state.isLoading = true;
-//       })
-//       .addCase(getBreedsByName.fulfilled, (state, actions) => {
-//         state.isLoading = false;
-//         state.breeds = actions.payload;
-//       })
-//       .addCase(getBreedsByName.rejected, (state, actions) => {
-//         state.isLoading = false;
-//       });
-//   },
-// });
+export const searchSlice = createSlice({
+  name: "search",
+  initialState,
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchRandomCats.pending, (state, actions) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchRandomCats.fulfilled, (state, actions) => {
+        state.isLoading = false;
+        state.search = actions.payload;
+      })
+      .addCase(fetchRandomCats.rejected, (state, actions) => {
+        state.isLoading = false;
+      });
+  },
+});
 
-// export default searchSlice.reducer;
+export default searchSlice.reducer;

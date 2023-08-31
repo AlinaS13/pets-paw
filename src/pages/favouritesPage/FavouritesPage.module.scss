@@ -1,0 +1,37 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.favouritesPageContainer {
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: $secondaryBgColor;
+}
+
+.headContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.galleryGrid {
+  @apply w-[640px] auto-rows-[150px] mx-auto grid grid-cols-3 gap-4;
+  li {
+    border-radius: 30px;
+  }
+  li:nth-child(10n + 1),
+  li:nth-child(10n + 8) {
+    @apply row-span-2;
+  }
+  li:nth-child(10n + 4),
+  li:nth-child(10n + 9) {
+    @apply row-span-2 col-span-2;
+  }
+}
+
+.favouritesImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}

@@ -1,0 +1,63 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.votingButtonWrp {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 20;
+}
+
+.votingButtonLike {
+  background-color: #97eab9;
+  padding: 20px 25px;
+  border: 3px solid $secondaryBgColor;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  svg {
+    fill: #fff;
+  }
+  &:hover,
+  &:focus {
+    background: #c5fbdb;
+    svg {
+      fill: #97eab9;
+    }
+  }
+}
+
+.votingButtonFavourite {
+  background-color: $mainAccentColor;
+  padding: 20px 25px;
+  border: 3px solid $secondaryBgColor;
+  svg {
+    fill: $secondaryBgColor;
+  }
+  &:hover,
+  &:focus {
+    background: $secondaryAccentColor;
+    svg {
+      fill: $mainAccentColor;
+    }
+  }
+}
+
+.votingButtonDislike {
+  background-color: #ffd280;
+  padding: 20px 25px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 3px solid $secondaryBgColor;
+  svg {
+    fill: $secondaryBgColor;
+  }
+  &:hover,
+  &:focus {
+    background: #ffefd1;
+    svg {
+      fill: #ffd380;
+    }
+  }
+}

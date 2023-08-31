@@ -16,10 +16,8 @@ import { NavLink } from "react-router-dom";
 
 const BreedsPage = () => {
   const breeds = useSelector(getBreeds);
-  // const { id } = useParams();
   const isLoading = useSelector(isLoadingBreeds);
   const filteredBreeds = useSelector(getFilteredBreeds);
-  // const [allBreeds, setAllBreeds] = useState(false);
   const [breed, setBreed] = useState(false);
   const [limit, setLimit] = useState(10);
   const [sort, setSort] = useState("asc");
@@ -27,16 +25,7 @@ const BreedsPage = () => {
   useEffect(() => {
     dispatch(getAllBreeds(20));
   }, [dispatch]);
-  // useEffect(() => {
-  //   if (breed) {
-  //     const filteredBreed = Object.values(breeds).filter(function (value) {
-  //       return value.name === breed;
-  //     })[0];
-  //     dispatch(getBreedById(filteredBreed.id));
-  //     console.log(filteredBreed.id);
-  //     // setBreed(false);
-  //   }
-  // }, [dispatch, breed, breeds]);
+
   useEffect(() => {
     if (breed && breeds) {
       const filteredBreed = breeds.find((value) => value.name === breed);

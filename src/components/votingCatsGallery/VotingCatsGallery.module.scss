@@ -1,0 +1,22 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.swiperWrp {
+  background-color: $secondaryBgColor;
+  width: 640px;
+  height: 360px;
+  margin: 0 auto;
+  margin-bottom: 51px;
+}
+
+.breedImage {
+  display: block;
+  width: 640px;
+  height: 360px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.votingGalleryContainer {
+  position: relative;
+}

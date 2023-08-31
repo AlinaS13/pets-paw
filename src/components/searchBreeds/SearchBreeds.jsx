@@ -3,7 +3,7 @@ import styles from "./SearchBreeds.module.scss";
 
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-import { getBreedsByName } from "redux/search/searchOperation";
+import { fetchRandomCats } from "redux/search/searchOperation";
 // import { getAllBreeds } from "redux/breeds/breedsOperation";
 // import { useEffect } from "react";
 export const SearchBreeds = () => {
@@ -17,7 +17,7 @@ export const SearchBreeds = () => {
     if (!e.target.search.value) {
       toast.warn("Enter your query");
     }
-    dispatch(getBreedsByName(e.target.search.value));
+    dispatch(fetchRandomCats(e.target.search.value));
     // setSearchQuery(e.target.search.value);
     // navigate(`/search?query=${searchQuery}`);
   };

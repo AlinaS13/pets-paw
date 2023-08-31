@@ -15,8 +15,9 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import logger from "redux-logger";
-// import searchSlice from "./search/SearchSlice";
 import breedsSlice from "./breeds/breedsSlice";
+import votingSlice from "./voting/votingSlice";
+import searchSlice from "./search/SearchSlice";
 
 const persistConfig = {
   key: "root",
@@ -26,8 +27,9 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  //   search: searchSlice,
+  search: searchSlice,
   breeds: breedsSlice,
+  voting: votingSlice,
 });
 
 const middlewares = [
